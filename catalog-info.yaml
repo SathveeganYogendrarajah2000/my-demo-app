@@ -2,6 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "my-demo-app"
+  description: A demo app
+  annotations:
+    prometheus.io/rule: memUsage|component,node_memory_active_bytes|instance,sum by (instance) (node_cpu_seconds_total)
+    prometheus.io/alert: 'Excessive Memory Usage'
 spec:
   type: service
   owner: user:guest
