@@ -4,11 +4,11 @@ metadata:
   name: "my-demo-app"
   description: A demo app
   annotations:
-    prometheus.io/scrape: 'true'
-    prometheus.io/path: '/metrics'
-    prometheus.io/port: '9090'
-    prometheus.io/rule: memUsage|component,node_memory_active_bytes|instance,sum by (instance) (node_cpu_seconds_total)
-    prometheus.io/alert: 'Excessive Memory Usage'
+    # prometheus.io/scrape: 'true'
+    # prometheus.io/path: '/metrics'
+    # prometheus.io/port: '9090'
+    # prometheus.io/rule: memUsage|component,node_memory_active_bytes|instance,sum by (instance) (node_cpu_seconds_total)
+    # prometheus.io/alert: 'Excessive Memory Usage'
 spec:
   type: service
   owner: user:guest
