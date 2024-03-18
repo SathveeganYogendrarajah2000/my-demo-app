@@ -2,6 +2,7 @@
   "name": "my-demo-app",
   "private": true,
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.3",
     "prom-client": "^15.1.0",
     "prometheus": "^0.1.7"
