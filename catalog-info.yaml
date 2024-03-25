@@ -4,11 +4,15 @@ metadata:
   name: "my-demo-app"
   description: A demo app
   annotations:
-    prometheus.io/scrape: 'true'
-    prometheus.io/path: '/metrics'
-    prometheus.io/port: '9090'
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/metrics"
+    prometheus.io/port: "9090"
     prometheus.io/rule: memUsage|component,node_memory_active_bytes|instance,sum by (instance) (node_cpu_seconds_total)
-    prometheus.io/alert: 'all'
+    prometheus.io/alert: "all"
+
+    circleci.com/project-slug: github/my-org/my-repo
+
+    pagerduty.com/integration-key: d5d851d2fa814e04c0dbf3091bd20425
 spec:
   type: service
   owner: user:guest
